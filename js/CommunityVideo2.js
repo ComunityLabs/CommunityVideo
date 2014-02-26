@@ -31,9 +31,23 @@
 		
 	// Estructurador
 	CommunityVideo.prototype.structure = function(){
-			
+		
+		// Theme
+		var theme = this.options.theme;
+		if(!$(this.video).attr('data-video-theme') && $(this.video).attr('data-video-theme')!=='') 
+			theme = $(this.video).attr('data-video-theme');
+		
+		// Width
+		var width = this.options.width;
+		if(!$(this.video).attr('data-video-width') && $(this.video).attr('data-video-width')!=='') 
+			width = $(this.video).attr('data-video-width');
+
+		// Width
+		var height = this.options.height;
+		if(!$(this.video).attr('data-video-height') && $(this.video).attr('data-video-height')!=='') height = $(this.video).attr('data-video-height');
+		
 		// Contenedor
-		$(this.video).wrapAll('<section data-video-role="CommunityVideo" data-video-key="'+this.key+'" data-video-theme="'+this.options.theme+'" style="width:'+this.options.width+';height'+this.options.height+';"/>');
+		$(this.video).wrapAll('<section data-video-role="CommunityVideo" data-video-key="'+this.key+'" data-video-theme="'+theme+'" style="width:'+width+';height'+height+';"/>');
 
 		// Remuevo los controles nativos
 		$(this.video).attr('id',this.key).removeProp('controls'); 
