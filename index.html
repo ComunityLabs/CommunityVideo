@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Communityvideo by ComunityLabs</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Communityvideo</h1>
+        <h2>ComunityVideo Es un plugin jQuery dedicado a la personalizacion de videos html5 basado en estilos css y css3, el plugin es actualizado por la comunidad, siendo Cristian Mari quien aporta la primera version de este plugin. Es openSoucer por lo que los usuarios podran hacer uso libre de él.</h2>
+        <a href="https://github.com/ComunityLabs/CommunityVideo" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="bienvenido-a-la-documentacion" class="anchor" href="#bienvenido-a-la-documentacion"><span class="octicon octicon-link"></span></a>Bienvenido a la documentacion</h1>
+
+<h2>
+<a name="instalacion-en-3-simples-pasos" class="anchor" href="#instalacion-en-3-simples-pasos"><span class="octicon octicon-link"></span></a>Instalacion en 3 simples pasos</h2>
+
+<hr><ol>
+<li>Primero descarga y descomprime el plugin.</li>
+<li>Coloca este codigo dentro de tu documento</li>
+</ol><div class="highlight highlight-javascript"><pre><span class="o">&lt;</span><span class="nx">link</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/css"</span> <span class="nx">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"css/CommunityVideo.css"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"js/CommunityVideo.js"</span><span class="o">&gt;</span>
+</pre></div>
+
+<ol>
+<li>Para inicializar de forma global el plugin pega este codigo al final de tu documento</li>
+</ol><div class="highlight highlight-javascript"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'video'</span><span class="p">).</span><span class="nx">CommunityVideo</span><span class="p">();</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</pre></div>
+
+<hr><h2>
+<a name="opciones-del-plugin" class="anchor" href="#opciones-del-plugin"><span class="octicon octicon-link"></span></a><strong>Opciones del plugin</strong>
+</h2>
+
+<div class="highlight highlight-javascript"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'video'</span><span class="p">).</span><span class="nx">CommunityVideo</span><span class="p">({</span>
+
+    <span class="c1">// opciones por default</span>
+    <span class="nx">theme</span>       <span class="o">:</span> <span class="s1">'youtube'</span><span class="p">,</span>
+    <span class="nx">controllers</span> <span class="o">:</span> <span class="p">[</span><span class="s1">'progress'</span><span class="p">,</span><span class="s1">'playToggle'</span><span class="p">,</span><span class="s1">'volume'</span><span class="p">,</span><span class="s1">'time'</span><span class="p">,</span><span class="s1">'fullscreen'</span><span class="p">],</span>
+    <span class="nx">width</span>       <span class="o">:</span> <span class="s1">'480px'</span><span class="p">,</span>
+    <span class="nx">height</span>      <span class="o">:</span> <span class="s1">'320px'</span><span class="p">,</span>
+
+<span class="p">});</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</pre></div>
+
+<ul>
+<li>La opcion <strong>theme</strong> corresponde al tipo de estilo que se procedera a usar para los videos.</li>
+<li>La opcion <strong>controllers</strong> define los tipos de controles a mostrar y su posicion.</li>
+<li>Las opciones width y height corresponde al tamaño que se usaran para los videos.</li>
+</ul><hr><h2>
+<a name="preguntas-frecuentes" class="anchor" href="#preguntas-frecuentes"><span class="octicon octicon-link"></span></a><strong>Preguntas Frecuentes</strong>
+</h2>
+
+<h3>
+<a name="-en-caso-de-querer-distintos-tama%C3%B1os-" class="anchor" href="#-en-caso-de-querer-distintos-tama%C3%B1os-"><span class="octicon octicon-link"></span></a>¿ En caso de querer distintos tamaños ?</h3>
+
+<p>Para lograr esto usted debera especificar en los videos con los atributos data-video-width y data-video-height los tamaños deseados para cada video, de lo contrario se usaran los obtenidos por default.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/ComunityLabs/CommunityVideo/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/ComunityLabs/CommunityVideo/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/ComunityLabs/CommunityVideo"></a> is maintained by <a href="https://github.com/ComunityLabs">ComunityLabs</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
