@@ -1,0 +1,47 @@
+<html>
+<head>
+    
+    <!--- Estilos css --->
+    <link rel="stylesheet" type="text/css" href="css/CommunityVideo.css">
+    
+    <!--- Javascript --->
+    <script type="application/javascript" src="js/jquery.js"></script>
+    <script type="application/javascript" src="js/communityVideo2.js"></script>
+    
+</head>
+<body>
+
+    <video controls>
+    
+        <source src="http://media.w3.org/2010/05/bunny/movie.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="http://media.w3.org/2010/05/bunny/movie.webm" type='video/webm;codecs="vp8, vorbis"' />
+        <source src="http://media.w3.org/2010/05/bunny/movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
+    
+    </video>
+
+
+    <video controls>
+    
+        <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm;codecs="vp8, vorbis"' />
+        <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg; codecs="theora, vorbis"' />
+    
+    </video>
+
+    <script type="application/javascript">
+    
+		$(document).ready(function(e) {
+            			
+	        $('video').CommunityVideo({
+
+				width: 640,
+				height: 320
+
+			}); // Solo funciona de a 1 elemento.
+
+        });
+    
+    </script>
+
+</body>
+</html>
